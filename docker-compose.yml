@@ -1,0 +1,9 @@
+version: '3.8' #Версия используемая при написании yml матрицу можно посмотреть https://docs.docker.com/compose/compose-file/compose-file-v3/ опираемся на версию установленного docker engine
+
+services:
+  hardcore_jackson:
+    container_name: hardcore_jackson # имя контейнера
+    ports:
+      - "8001:80"  
+    environment:   #Переменные которые передаем в контейнер. В данном случае - переменные для авторизации в веб интерфейс pgadmin
+     	tmp_value: I was writing a paper when you called.
